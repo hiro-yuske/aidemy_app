@@ -5,7 +5,8 @@ from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.preprocessing import image
 
 import numpy as np
-
+import tensorflow as tf
+print(tf.__version__)
 
 classes = ["飛行機","車"]
 image_size = 50
