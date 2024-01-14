@@ -5,8 +5,6 @@ from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.preprocessing import image
 
 import numpy as np
-import tensorflow as tf
-print(tf.__version__)
 
 classes = ["飛行機","車"]
 image_size = 50
@@ -52,4 +50,5 @@ def upload_file():
 
 
 if __name__ == "__main__":
-    app.run()
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host ='0.0.0.0',port = port)
